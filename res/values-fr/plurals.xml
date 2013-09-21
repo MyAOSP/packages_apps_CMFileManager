@@ -28,7 +28,7 @@
     </plurals>
     <plurals name="selection_folders">
         <item quantity="one">1 dossier sélectionné.</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> dossiers sélectionnés.</item>
+        <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> dossiers sélectionnés.</item>
     </plurals>
     <plurals name="selection_files">
         <item quantity="one">1 fichier sélectionné.</item>

@@ -611,6 +611,9 @@ public class SearchActivity extends Activity
         }
 
         //Set the listview
+        if (this.mSearchListView.getAdapter() != null) {
+            ((SearchResultAdapter)this.mSearchListView.getAdapter()).dispose();
+        }
         this.mResultList = new ArrayList<FileSystemObject>();
         SearchResultAdapter adapter =
                 new SearchResultAdapter(this,
@@ -783,7 +786,6 @@ public class SearchActivity extends Activity
     void removeAll() {
         SearchResultAdapter adapter = (SearchResultAdapter)this.mSearchListView.getAdapter();
         adapter.clear();
-        adapter.notifyDataSetChanged();
         this.mSearchListView.setSelection(0);
         toggleResults(false, true);
     }
@@ -1047,7 +1049,7 @@ public class SearchActivity extends Activity
                     @Override
                     public void onSuccess() {
                         if (navigateTo(fFso, intent)) {
-                            finish();
+                            exit();
                         }
                     }
                     @Override
@@ -1072,8 +1074,18 @@ public class SearchActivity extends Activity
 
         // End this activity
         if (finish) {
-            finish();
+            exit();
         }
+    }
+
+    /**
+     * Method invoked when the activity needs to exit
+     */
+    private void exit() {
+        if (this.mSearchListView.getAdapter() != null) {
+            ((SearchResultAdapter)this.mSearchListView.getAdapter()).dispose();
+        }
+        finish();
     }
 
     /**

@@ -34,6 +34,7 @@ import com.cyanogenmod.filemanager.model.SystemFile;
 import java.io.File;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Properties;
 
@@ -246,7 +247,7 @@ public final class MimeTypeHelper {
         //Get the extension and delivery
         String ext = FileHelper.getExtension(fso);
         if (ext != null) {
-            MimeTypeInfo mimeTypeInfo = sMimeTypes.get(ext.toLowerCase());
+            MimeTypeInfo mimeTypeInfo = sMimeTypes.get(ext.toLowerCase(Locale.ROOT));
             if (mimeTypeInfo != null) {
                 // Create a new drawable
                 if (!TextUtils.isEmpty(mimeTypeInfo.mDrawable)) {
@@ -298,15 +299,7 @@ public final class MimeTypeHelper {
         }
 
         //Get the extension and delivery
-        String ext = FileHelper.getExtension(fso);
-        if (ext != null) {
-            //Load from the database of mime types
-            MimeTypeInfo mimeTypeInfo = sMimeTypes.get(ext.toLowerCase());
-            if (mimeTypeInfo != null) {
-                return mimeTypeInfo.mMimeType;
-            }
-        }
-        return null;
+        return getMimeTypeFromExtension(fso);
     }
 
     /**
@@ -347,15 +340,27 @@ public final class MimeTypeHelper {
         }
 
         //Get the extension and delivery
-        String ext = FileHelper.getExtension(fso);
-        if (ext != null) {
-            //Load from the database of mime types
-            MimeTypeInfo mimeTypeInfo = sMimeTypes.get(ext.toLowerCase());
-            if (mimeTypeInfo != null) {
-                return mimeTypeInfo.mMimeType;
-            }
+        String mime = getMimeTypeFromExtension(fso);
+        if (mime != null) {
+            return mime;
         }
+
         return res.getString(R.string.mime_unknown);
+    }
+
+    private static final String getMimeTypeFromExtension(final FileSystemObject fso) {
+        String ext = FileHelper.getExtension(fso);
+        if (ext == null) {
+            return null;
+        }
+
+        //Load from the database of mime types
+        MimeTypeInfo mimeTypeInfo = sMimeTypes.get(ext.toLowerCase(Locale.ROOT));
+        if (mimeTypeInfo == null) {
+            return null;
+        }
+
+        return mimeTypeInfo.mMimeType;
     }
 
     /**
@@ -377,7 +382,7 @@ public final class MimeTypeHelper {
         }
         if (ext != null) {
             //Load from the database of mime types
-            MimeTypeInfo mimeTypeInfo = sMimeTypes.get(ext.toLowerCase());
+            MimeTypeInfo mimeTypeInfo = sMimeTypes.get(ext.toLowerCase(Locale.ROOT));
             if (mimeTypeInfo != null) {
                 return mimeTypeInfo.mCategory;
             }
@@ -411,17 +416,7 @@ public final class MimeTypeHelper {
         }
 
         //Get the extension and delivery
-        String ext = FileHelper.getExtension(file.getName());
-        if (ext != null) {
-            //Load from the database of mime types
-            MimeTypeInfo mimeTypeInfo = sMimeTypes.get(ext.toLowerCase());
-            if (mimeTypeInfo != null) {
-                return mimeTypeInfo.mCategory;
-            }
-        }
-
-        // No category
-        return MimeTypeCategory.NONE;
+        return getCategoryFromExt(context, FileHelper.getExtension(file.getName()));
     }
 
     /**
@@ -451,21 +446,15 @@ public final class MimeTypeHelper {
         }
 
         //Get the extension and delivery
-        String ext = FileHelper.getExtension(fso);
-        if (ext != null) {
-            //Load from the database of mime types
-            MimeTypeInfo mimeTypeInfo = sMimeTypes.get(ext.toLowerCase());
-            if (mimeTypeInfo != null) {
-                return mimeTypeInfo.mCategory;
-            }
-        }
+        final MimeTypeCategory category = getCategoryFromExt(context,
+                FileHelper.getExtension(fso));
+
         // Check  system file
-        if (fso instanceof SystemFile) {
+        if (category == MimeTypeCategory.NONE && fso instanceof SystemFile) {
             return MimeTypeCategory.SYSTEM;
         }
 
-        // No category
-        return MimeTypeCategory.NONE;
+        return category;
     }
 
     /**
@@ -481,7 +470,7 @@ public final class MimeTypeHelper {
             return "-";  //$NON-NLS-1$
         }
         try {
-            String id = "category_" + category.toString().toLowerCase(); //$NON-NLS-1$
+            String id = "category_" + category.toString().toLowerCase(Locale.ROOT); //$NON-NLS-1$
             int resid = ResourcesHelper.getIdentifier(
                     context.getResources(), "string", id); //$NON-NLS-1$
             return context.getString(resid);
@@ -553,4 +542,44 @@ public final class MimeTypeHelper {
         return mimeTypeExpression.replaceAll("\\*", ".\\*"); //$NON-NLS-1$ //$NON-NLS-2$
     }
 
+
+    /**
+     * Class for resolve known mime types
+     */
+    public static final class KnownMimeTypeResolver {
+        private static final String MIME_TYPE_APK = "application/vnd.android.package-archive";
+
+        /**
+         * Method that returns if the FileSystemObject is an Android app.
+         *
+         * @param context The current context
+         * @param fso The FileSystemObject to check
+         * @return boolean If the FileSystemObject is an Android app.
+         */
+        public static boolean isAndroidApp(Context context, FileSystemObject fso) {
+            return MIME_TYPE_APK.equals(MimeTypeHelper.getMimeType(context, fso));
+        }
+
+        /**
+         * Method that returns if the FileSystemObject is an image file.
+         *
+         * @param context The current context
+         * @param fso The FileSystemObject to check
+         * @return boolean If the FileSystemObject is an image file.
+         */
+        public static boolean isImage(Context context, FileSystemObject fso) {
+            return MimeTypeHelper.getCategory(context, fso).compareTo(MimeTypeCategory.IMAGE) == 0;
+        }
+
+        /**
+         * Method that returns if the FileSystemObject is an video file.
+         *
+         * @param context The current context
+         * @param fso The FileSystemObject to check
+         * @return boolean If the FileSystemObject is an video file.
+         */
+        public static boolean isVideo(Context context, FileSystemObject fso) {
+            return MimeTypeHelper.getCategory(context, fso).compareTo(MimeTypeCategory.VIDEO) == 0;
+        }
+    }
 }

@@ -15,25 +15,28 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <plurals name="n_folders">
-    <item quantity="one">папок: <xliff:g id="folders">%1$d</xliff:g></item>
-    <item quantity="other">папок: <xliff:g id="folders">%1$d</xliff:g></item>
+    <item quantity="one"><xliff:g id="folders">%1$d</xliff:g> папка</item>
+    <item quantity="few"><xliff:g id="folders">%1$d</xliff:g> папки</item>
+    <item quantity="many"><xliff:g id="folders">%1$d</xliff:g> папок</item>
   </plurals>
   <plurals name="n_files">
-    <item quantity="one">файлов: <xliff:g id="files">%1$d</xliff:g></item>
-    <item quantity="other">файлов: <xliff:g id="files">%1$d</xliff:g></item>
+    <item quantity="one"><xliff:g id="files">%1$d</xliff:g> файл</item>
+    <item quantity="few"><xliff:g id="files">%1$d</xliff:g> файла</item>
+    <item quantity="many"><xliff:g id="files">%1$d</xliff:g> файлов</item>
   </plurals>
-  <!-- Search * Search found items -->
   <plurals name="search_found_items">
-    <item quantity="one">Найдено значений: <xliff:g id="count">%d</xliff:g></item>
-    <item quantity="other">Найдено значений: <xliff:g id="count">%d</xliff:g></item>
+    <item quantity="one">Найдено <xliff:g id="count">%d</xliff:g> значение</item>
+    <item quantity="few">Найдено <xliff:g id="count">%d</xliff:g> значения</item>
+    <item quantity="many">Найдено <xliff:g id="count">%d</xliff:g> значений</item>
   </plurals>
-  <!-- Statusbar text if there are selected folders or files -->
   <plurals name="selection_folders">
-    <item quantity="one">Выбрано папок: <xliff:g id="folders">%1$d</xliff:g></item>
-    <item quantity="other">Выбрано папок: <xliff:g id="folders">%1$d</xliff:g></item>
+    <item quantity="one">Выбрана <xliff:g id="folders">%1$d</xliff:g> папка.</item>
+    <item quantity="few">Выбрано <xliff:g id="folders">%1$d</xliff:g> папки.</item>
+    <item quantity="many">Выбрано <xliff:g id="folders">%1$d</xliff:g> папок.</item>
   </plurals>
   <plurals name="selection_files">
-    <item quantity="one">Выбрано файлов: <xliff:g id="files">%1$d</xliff:g></item>
-    <item quantity="other">Выбрано файлов: <xliff:g id="files">%1$d</xliff:g></item>
+    <item quantity="one">Выбран <xliff:g id="files">%1$d</xliff:g> файл.</item>
+    <item quantity="few">Выбрано <xliff:g id="files">%1$d</xliff:g> файла.</item>
+    <item quantity="many">Выбрано <xliff:g id="files">%1$d</xliff:g> файлов.</item>
   </plurals>
 </resources>
