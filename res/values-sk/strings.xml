@@ -13,344 +13,180 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
-  <!-- The name of the application -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Správca súborov</string>
-  <!-- The description of the application -->
-  <string name="app_description">CyanogenMod správca súborov</string>
-
-  <!-- Devices types -->
+  <string name="app_description">Správca súborov pre CyanogenMod</string>
+  <string name="size_bytes">B</string>
+  <string name="size_kilobytes">kB</string>
+  <string name="size_megabytes">MB</string>
+  <string name="size_gigabytes">GB</string>
+  <string name="datetime_format_order">%1$s %2$s</string>
   <string name="device_blockdevice">Blokové zariadenie</string>
   <string name="device_characterdevice">Znakové zariadenie</string>
   <string name="device_namedpipe">Pomenovaná rúra</string>
   <string name="device_domainsocket">Doménový socket</string>
-
-  <!-- Mount Point States -->
   <string name="mount_point_readonly">RO</string>
   <string name="mount_point_readwrite">RW</string>
-
-  <!-- Default buttons -->
   <string name="yes">Áno</string>
   <string name="no">Nie</string>
-  <string name="all">Všetky</string>
+  <string name="all">Všetko</string>
   <string name="overwrite">Prepísať</string>
-
-  <!-- The root directory name -->
+  <string name="select">Vybrať</string>
   <string name="root_directory_name"><![CDATA[<Koreňový priečinok>]]></string>
-  <!-- The search result name -->
   <string name="search_result_name">Hľadať: <xliff:g id="terms">%1$s</xliff:g></string>
-
-  <!-- Loading waiting message -->
   <string name="loading_message">Prebieha načítavanie\u2026</string>
-  <!-- Cancelled message -->
   <string name="cancelled_message">Zrušené.</string>
-  <!-- Error message -->
   <string name="error_message">Chyba.</string>
-
-  <!-- Warning dialog title -->
+  <string name="copy_text_cd">Ťuknutím skopírujete text do schránky</string>
+  <string name="copy_text_msg">Text bol skopírovaný do schránky</string>
   <string name="warning_title">Upozornenie</string>
-  <!-- Error dialog title -->
   <string name="error_title">Bola zistená chyba</string>
-  <!-- Confirm operation dialog title -->
-  <string name="confirm_operation">Potvrdiť operáciu</string>
-  <!-- Confirm overwrite dialog title -->
-  <string name="confirm_overwrite">Potvrdiť prepísanie</string>
-  <!-- Confirm deletion dialog title -->
-  <string name="confirm_deletion">Potvrdiť odstránenie</string>
-
-  <!--  A console couldn't be created. Ask the user to change the access mode. Dialog Title -->
-  <string name="msgs_change_to_prompt_access_mode_title">Potvrdiť prepnutie</string>
-  <!--  A console couldn't be created. Ask the user to change the access mode. Dialog Message -->
+  <string name="confirm_operation">Potvrdenie operácie</string>
+  <string name="confirm_overwrite">Potvrdenie prepísania</string>
+  <string name="confirm_deletion">Potvrdenie odstránenia</string>
+  <string name="msgs_change_to_prompt_access_mode_title">Potvrdenie prepnutia</string>
   <string name="msgs_change_to_prompt_access_mode_msg">Nemožno spustiť v režime bez obmedzenia. Prebieha zmena na bezpečný režim.\n\nChcete napriek tomu vykonať túto zmenu?</string>
-
-  <!-- A console couldn't be created. Without privileges, the application won't work -->
   <string name="msgs_cant_create_console">Nemožno získať požadované oprávnenie na vykonanie funkcie.</string>
-  <!-- The message shown when an allocation of a privileged console fails, and a non
-       privileged is allocated -->
   <string name="msgs_privileged_console_alloc_failed">Nemožno spustiť v režime bez obmedzenia.Prebieha zmena na bezpečný režim.</string>
-  <!-- The selected setting was not applied or stored -->
   <string name="msgs_settings_save_failure">Nastavenie nemohlo byť použité alebo uložené.</string>
-  <!-- The initial directory has an invalid or inaccessible reference -->
   <string name="msgs_settings_invalid_initial_directory">Počiatočný priečinok \"<xliff:g Id="initial_dir">%1$s</xliff:g>\" je neplatný. Prebieha zmena na koreňový priečinok.</string>
-
-  <!-- Success -->
-  <string name="msgs_success">Operácia bola úspešná.</string>
-  <!-- Unknown error -->
-  <string name="msgs_unknown">Vyskytla sa chyba. Operácia bola neúspešná.</string>
-  <!-- When an operation requires elevated privileged (normally caused for the use of a
-       non-privileged console) -->
+  <string name="msgs_success">Operácia bola úspešne dokončená.</string>
+  <string name="msgs_unknown">Vyskytla sa chyba. Operácia nebola úspešne dokončená.</string>
   <string name="msgs_insufficient_permissions">Táto operácia vyžaduje väčšie oprávnenie. Skúste zmeniť na režim bez obmedzenia.</string>
-  <!-- The file or directory was not found -->
   <string name="msgs_file_not_found">Súbor alebo priečinok sa nenašiel.</string>
-  <!-- The command reference couldn't be created (not found or invalid definition)
-       (normally caused by a development error) -->
   <string name="msgs_command_not_found">Príkaz operácie nebol nájdený alebo má neplatnú definíciu.</string>
-  <!-- I/O exception -->
-  <string name="msgs_io_failed">Chyba pr čítaní/zápise.</string>
-  <!-- Operation timeout detected -->
+  <string name="msgs_io_failed">Chyba pri čítaní/zápise.</string>
   <string name="msgs_operation_timeout">Čas pre operáciu vypršal.</string>
-  <!-- The operation returns an invalid exit code -->
   <string name="msgs_operation_failure">Operácia zlyhala.</string>
-  <!-- A console couldn't be allocated -->
   <string name="msgs_console_alloc_failure">Došlo k vnútornej chybe.</string>
-  <!-- An operation can't be cancelled -->
   <string name="msgs_operation_can_not_be_cancelled">Operácia sa nedá zrušiť.</string>
-  <!-- The operation requieres mount the file system prior to execute the command -->
   <string name="msgs_read_only_filesystem">Súborový systém je v režime iba na čítanie. Pred potvrdením operácie skúste pripojiť súborový systém v režime pre zápis.</string>
-  <!-- Illegal argument (normally caused by a development error when calling internal api) -->
   <string name="msgs_illegal_argument">Neplatný argument. Vykonanie operácie zlyhalo.</string>
-  <!-- The operation will cause inconsistencies -->
   <string name="msgs_unresolved_inconsistencies">Operácia nie je povolená, pretože by mohla spôsobiť nezrovnalosti.</string>
-  <!-- Operation not permitted in current directory -->
   <string name="msgs_operation_not_allowed_in_current_directory">Operácia nie je v aktuálnom priečinku povolená.</string>
-
-  <!-- The advice message prior to exit the application -->
   <string name="msgs_push_again_to_exit">Stlačte znova pre ukončenie.</string>
-
-  <!-- There is no registered application that can handle the mime-type -->
   <string name="msgs_not_registered_app">Pre tento typ súboru nie je priradená žiadna apllikácia.</string>
-
-  <!-- Overwrite files? -->
-  <string name="msgs_overwrite_files">V cieľovom priečinku už existujú niektoré súbory.\n\nPrepísať?</string>
-
-  <!-- The association of an action to the application failed -->
+  <string name="msgs_overwrite_files">V cieľovom priečinku už niektoré súbory existujú.\n\nMajú sa prepísať?</string>
   <string name="msgs_action_association_failed">Priradenie akcie k aplikácii zlyhalo.</string>
-
-  <!-- An operation requires elevated privileged. Ask the user. -->
   <string name="advise_insufficient_permissions">Táto operácia vyžaduje väčšie oprávnenie.\n\nChcete zmeniť na režim bez obmedzenia.</string>
-
-
-  <!-- The parent directory of the current directory in navigation view -->
   <string name="parent_dir">Nadradený priečinok</string>
-  <!-- External storage descripton -->
   <string name="external_storage">Externé úložisko</string>
-  <!-- Usb storage descripton -->
   <string name="usb_storage">USB úložisko</string>
-
-  <!-- ActionBar Buttons * FileSystem -->
   <string name="actionbar_button_filesystem_cd">Informácie o súborovom systéme</string>
-  <!-- ActionBar Buttons * Sort Mode -->
   <string name="actionbar_button_sort_mode_cd">Režim radenia</string>
-  <!-- ActionBar Buttons * Layout Mode -->
   <string name="actionbar_button_layout_mode_cd">Režim rozloženia</string>
-  <!-- ActionBar Buttons * Other View Options -->
   <string name="actionbar_button_other_view_options_cd">Ďalšie možnosti zobrazenia</string>
-  <!-- ActionBar Buttons * Done -->
   <string name="actionbar_button_selection_done_cd">Hotovo</string>
-  <!-- ActionBar Buttons * Actions -->
   <string name="actionbar_button_actions_cd">Akcie</string>
-  <!-- ActionBar Buttons * History -->
   <string name="actionbar_button_history_cd">História</string>
-  <!-- ActionBar Buttons * Bookmarks -->
   <string name="actionbar_button_bookmarks_cd">Záložky</string>
-  <!-- ActionBar Buttons * Search -->
   <string name="actionbar_button_search_cd">Hľadať</string>
-  <!-- ActionBar Buttons * Overflow -->
   <string name="actionbar_button_overflow_cd">Viac možností</string>
-  <!-- ActionBar Buttons * Storage volumes -->
   <string name="actionbar_button_storage_cd">Zväzky úložiska</string>
-  <!-- ActionBar Buttons * Save -->
   <string name="actionbar_button_save_cd">Uložiť</string>
-
-  <!-- Navigation View * Sort * Sort by name (ascending) -->
   <string name="sort_by_name_asc">Podľa názvu &#x25B2;</string>
-  <!-- Navigation View * Sort * Sort by name (descending) -->
   <string name="sort_by_name_desc">Podľa názvu &#x25BC;</string>
-  <!-- Navigation View * Sort * Sort by date (ascending) -->
   <string name="sort_by_date_asc">Podľa dátumu &#x25B2;</string>
-  <!-- Navigation View * Sort * Sort by date (descending) -->
   <string name="sort_by_date_desc">Podľa dátumu &#x25BC;;</string>
-
-  <!-- Navigation View * Layout * Icons -->
   <string name="layout_icons">Ikony</string>
-  <!-- Navigation View * Layout * Simple -->
-  <string name="layout_simple">Jednoduchý</string>
-  <!-- Navigation View * Layout * Details -->
-  <string name="layout_details">Detaily</string>
-
-  <!-- Navigation View * View * Show folders first -->
-  <string name="cm_filemanager_show_dirs_first">Zobraziť najprv priečinky</string>
-  <!-- Navigation View * View * Show hidden files option -->
+  <string name="layout_simple">Jednoduché</string>
+  <string name="layout_details">Podrobnosti</string>
+  <string name="cm_filemanager_show_dirs_first">Zobraziť najskôr priečinky</string>
   <string name="cm_filemanager_show_hidden">Zobraziť skryté súbory</string>
-  <!-- Navigation View * View * Show system files option -->
   <string name="cm_filemanager_show_system">Zobraziť systémové súbory</string>
-  <!-- Navigation View * View * Show symlinks option -->
   <string name="cm_filemanager_show_symlinks">Zobraziť symbolické odkazy</string>
-
-  <!-- Filesystem Info (no data). Dialog title -->
   <string name="filesystem_info_warning_title">Žiadne informácie</string>
-  <!-- Filesystem Info (no data). Dialog message -->
   <string name="filesystem_info_warning_msg">Nie sú k dispozícii žiadne informácie o súborovom systéme.</string>
-  <!-- Filesystem Info * Filesystem couldn't be mounted -->
   <string name="filesystem_info_cant_be_mounted_msg">Súborový systém nie je možné pripojiť/odpojiť.</string>
-  <!-- Filesystem Info * Not allowed message -->
   <string name="filesystem_info_mount_not_allowed_msg">V bezpečnom režime nie je povolené pripojiť súborový systém. Kliknite tu pre zmenu na režim bez obmedzenia.</string>
-  <!-- Filesystem Info * Mount failed -->
   <string name="filesystem_info_mount_failed_msg">Pripojenie súborového systému zlyhalo. Niektoré súborové systémy ako SD karty, nemôžu byť pripojené/odpojené, pretože sú zostavené v režime iba na čítanie.</string>
-  <!-- Filesystem Info Dialog * Title -->
   <string name="filesystem_info_dialog_title">Informácie o súborovom systéme</string>
-  <!-- Filesystem Info Dialog * Tab * Info -->
   <string name="filesystem_info_dialog_tab_info">Informácie</string>
-  <!-- Filesystem Info Dialog * Tab * Disk Usage -->
   <string name="filesystem_info_dialog_tab_disk_usage">Využitie disku</string>
-  <!-- Filesystem Info Dialog * Status Label -->
   <string name="filesystem_info_dialog_status">Stav:</string>
-  <!-- Filesystem Info Dialog * Mount Point Label -->
   <string name="filesystem_info_dialog_mount_point">Prípojný bod:</string>
-  <!-- Filesystem Info Dialog * Device Label -->
   <string name="filesystem_info_dialog_device">Zariadenie:</string>
-  <!-- Filesystem Info Dialog * Type Label -->
   <string name="filesystem_info_dialog_type">Typ:</string>
-  <!-- Filesystem Info Dialog * Options Label -->
-  <string name="filesystem_info_dialog_options">Možnosti:</string>
-  <!-- Filesystem Info Dialog * Dump/Pass Label -->
+  <string name="filesystem_info_dialog_options">Voľby:</string>
   <string name="filesystem_info_dialog_dump_pass">Dump / Pass:</string>
-  <!-- Filesystem Info Dialog * Total Disk Usage -->
   <string name="filesystem_info_dialog_total_disk_usage">Celkom:</string>
-  <!-- Filesystem Info Dialog * Used Disk Usage -->
   <string name="filesystem_info_dialog_used_disk_usage">Použité:</string>
-  <!-- Filesystem Info Dialog * Free Disk Usage -->
   <string name="filesystem_info_dialog_free_disk_usage">Voľné:</string>
-
-  <!-- Fso Properties * Not allowed message -->
   <string name="fso_properties_permissions_not_allowed_msg">Operácie s oprávneniami nie sú povolené v bezpečnom režime. Kliknite pre zmenu na režim bez obmedzenia.</string>
-  <!-- Fso Properties * Failed to change owner to fso -->
   <string name="fso_properties_failed_to_change_owner_msg">Zmena vlastníka zlyhala. \n\nZ bezpečnostných dôvodov, niektoré súborové systémy, ako napr. SD karty, neumožňujú zmenu vlastníctva.</string>
-  <!-- Fso Properties * Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_group_msg">Zmena skupiny zlyhala. \n\nZ bezpečnostných dôvodov, niektoré súborové systémy, ako napr. SD karty, neumožňujú zmenu skupiny.</string>
-  <!-- Fso Properties * Failed to change group to fso -->
   <string name="fso_properties_failed_to_change_permission_msg">Zmena oprávnení zlyhala. \n \nZ bezpečnostných dôvodov, niektoré súborové systémy, ako napr. SD karty, neumožňujú zmenu oprávnení.</string>
-  <!-- Fso Properties Dialog * Title -->
   <string name="fso_properties_dialog_title">Vlastnosti</string>
-  <!-- Fso Properties Dialog * Tab * Info -->
   <string name="fso_properties_dialog_tab_info">Informácie</string>
-  <!-- Fso Properties Dialog * Tab * Permissions -->
   <string name="fso_properties_dialog_tab_permissions">Oprávnenia</string>
-  <!-- Fso Properties Dialog * Name Label -->
   <string name="fso_properties_dialog_name">Názov:</string>
-  <!-- Fso Properties Dialog * Parent Folder Label -->
   <string name="fso_properties_dialog_parent">Nadradený priečinok:</string>
-  <!-- Fso Properties Dialog * Type Label -->
   <string name="fso_properties_dialog_type">Typ:</string>
-  <!-- Fso Properties Dialog * Category Label -->
   <string name="fso_properties_dialog_category">Kategória:</string>
-  <!-- Fso Properties Dialog * Link Label -->
   <string name="fso_properties_dialog_link">Odkaz:</string>
-  <!-- Fso Properties Dialog * Size Label -->
   <string name="fso_properties_dialog_size">Veľkosť:</string>
-  <!-- Fso Properties Dialog * Contains Label -->
   <string name="fso_properties_dialog_contains">Obsah:</string>
-  <!-- Fso Properties Dialog * Owner Label -->
+  <string name="fso_properties_dialog_last_accessed_date">Posledný prístup:</string>
+  <string name="fso_properties_dialog_last_modified_date">Upravené:</string>
+  <string name="fso_properties_dialog_last_changed_date">Zmenené:</string>
   <string name="fso_properties_dialog_owner">Vlastník:</string>
-  <!-- Fso Properties Dialog * Group Label -->
   <string name="fso_properties_dialog_group">Skupina:</string>
-  <!-- Fso Properties Dialog * Others Label -->
   <string name="fso_properties_dialog_others">Ostatné:</string>
-  <!-- Fso Properties Dialog * Special Label -->
-  <!-- Fso Properties Dialog * Folders -->
-  <plurals name="fso_properties_dialog_folders">
-    <item quantity="zero">0 priečinkov</item>
-    <item quantity="one">1 priečinok</item>
-    <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> priečinky(-ov)</item>
-  </plurals>
-  <!-- Fso Properties Dialog * Files -->
-  <plurals name="fso_properties_dialog_files">
-    <item quantity="zero">0 súborov</item>
-    <item quantity="one">1 súbor</item>
-    <item quantity="other"><xliff:g id="files">%1$d</xliff:g> súbory(-ov)</item>
-  </plurals>
-
-  <!-- History * History activity title -->
+  <string name="fso_properties_dialog_include_in_media_scan">Vynechať prieskum médií:</string>
+  <string name="fso_failed_to_allow_media_scan">Zlyhalo povolenie prieskumu médií</string>
+  <string name="fso_failed_to_prevent_media_scan">Zlyhalo zabránenie prieskumu médií</string>
+  <string name="fso_delete_nomedia_dir_title">Odstrániť adresár .nomedia</string>
+  <string name="fso_delete_nomedia_dir_body">Tento adresár obsahuje adresár s názvom .nomedia.\n\nDo you want to delete it and all of its contents?</string>
+  <string name="fso_delete_nomedia_non_empty_title">Odstrániť súbor .nomedia</string>
+  <string name="fso_delete_nomedia_non_empty_body">Tento adresár obsahuje súbor s názvom .nomedia.\n\nDo you want to delete it?</string>
   <string name="history">História</string>
-  <!-- History * The history is empty -->
   <string name="msgs_history_empty">História je prázdna.</string>
-  <!-- History * The history reference is not in the actual history list -->
   <string name="msgs_history_unknown">Neznáma položka histórie</string>
-
-  <!-- Search * Search activity title -->
   <string name="search">Výsledky vyhľadávania</string>
-  <!-- Search * Search hint message -->
   <string name="search_hint">Zadajte hľadaný výraz</string>
-  <!-- Search * Voice search hint message -->
   <string name="search_voice_hint">Vyslovte hľadaný výraz</string>
-  <!-- Search * Search error message -->
   <string name="search_error_msg">Došlo k chybe pri vyhľadávaní. Žiadne výsledky.</string>
-  <!-- Search * Search no results message -->
   <string name="search_no_results_msg">Nenašli sa žiadne výsledky.</string>
-  <!-- Search * Search found items -->
-  <plurals name="search_found_items">
-    <item quantity="zero">Nenájdená žiadna položka</item>
-    <item quantity="one">Našla sa 1 položka</item>
-    <item quantity="other"><xliff:g id="count">%d</xliff:g> nájdené(-ých) položky(-iek)</item>
-  </plurals>
-  <!-- Search * Number of items found in directory -->
   <string name="search_found_items_in_directory"><xliff:g id="items">%1$s</xliff:g> v<xliff:g id="path">%2$s</xliff:g></string>
-  <!-- Search * Search query terms -->
   <string name="search_terms"><![CDATA[<b>Podmienky:</b>]]> <xliff:g id="terms">%1$s</xliff:g></string>
-  <!-- Search * Confirm search -->
   <string name="search_few_characters_title">Potvrdiť hľadanie</string>
-  <!-- Search * Some terms of the search are too small. The operation could be very costly -->
   <string name="search_few_characters_msg">Niektoré z vyhľadávaných výrazov sú príliš krátke. Táto operácia bude veľmi náročná na čas a systémové zdroje. \n\nUrčite chcete pokračovať?</string>
-  <!-- Search * Searching dialog title -->
   <string name="searching">Čakajte prosím\u2026</string>
-  <!-- Search * Searching label -->
   <string name="searching_action_label">Prebieha hľadanie</string>
-
-  <!-- Picker Activity * Dialog title -->
   <string name="picker_title">Vyberte súbor</string>
-
-  <!-- Editor * Editor activity title -->
+  <string name="directory_picker_title">Vyberte adresár</string>
   <string name="editor">Editor</string>
-  <!-- Editor * Invalid file message -->
   <string name="editor_invalid_file_msg">Neplatný súbor.</string>
-  <!-- Editor * File not found message -->
-  <string name="editor_file_not_found_msg">Súbor nenájdený.</string>
-  <!-- Editor * File size exceed the limit -->
+  <string name="editor_file_not_found_msg">Súbor sa nenašiel.</string>
   <string name="editor_file_exceed_size_msg">Súbor je príliš veľký na otvorenie v tomto zariadení.</string>
-  <!-- Editor * Editor is dirty, ask the user * Dialog title -->
   <string name="editor_dirty_ask_title">Potvrdiť ukončenie</string>
-  <!-- Editor * Editor is dirty, ask the user * Dialog message -->
   <string name="editor_dirty_ask_msg">V súbore boli vykonané zmeny. \n\nUkončiť bez uloženia?</string>
-  <!-- Editor * Save operation success -->
   <string name="editor_successfully_saved">Súbor bol úspešne uložený.</string>
-  <!-- Editor * Read-only file mode -->
   <string name="editor_read_only_mode">Súbor je otvorený iba na čítanie.</string>
-
-  <!-- Bookmarks * Bookmarks activity title -->
+  <string name="dumping_message">Generuje sa hexadecimálny výpis\u2026</string>
+  <string name="displaying_message">Zobrazuje sa\u2026</string>
   <string name="bookmarks">Záložky</string>
-  <!-- Bookmarks * Bookmark name * Home -->
   <string name="bookmarks_home">Domov</string>
-  <!-- Bookmarks * Bookmark name * Root folder -->
   <string name="bookmarks_root_folder">Koreňový priečinok</string>
-  <!-- Bookmarks * Bookmark name * System folder -->
   <string name="bookmarks_system_folder">Systémový priečinok</string>
-  <!-- Bookmarks * Bookmark name * Button * Initial directory content description -->
   <string name="bookmarks_button_config_cd">Nastavte počiatočný priečinok.</string>
-  <!-- Bookmarks * Bookmark name * Button * Remove bookmark content description -->
   <string name="bookmarks_button_remove_bookmark_cd">Odstrániť zo záložiek.</string>
-  <!-- Bookmarks * Bookmarks * Actions * Bookmark successfully added -->
   <string name="bookmarks_msgs_add_success">Záložka bola úspešne pridaná.</string>
-
-  <!-- Initial directory dialog title -->
   <string name="initial_directory_dialog_title">Počiatočný priečinok</string>
-  <!-- Initial directory label -->
   <string name="initial_directory_label">Vyberte počiatočný priečinok:</string>
-  <!-- Initial directory is relative -->
   <string name="initial_directory_relative_msg">Relatívna cesty nie sú povolené.</string>
-  <!-- Initial directory error message -->
   <string name="initial_directory_error_msg">Došlo k chybe pri ukladaní počiatočného priečinka.</string>
-
-  <!-- Menu * Navigation * History -->
   <string name="menu_history">História</string>
-  <!-- Menu * Navigation * Bookmarks -->
   <string name="menu_bookmarks">Záložky</string>
-  <!-- Menu * Navigation * Search -->
   <string name="menu_search">Hľadať</string>
-  <!-- Menu * Navigation * Settings -->
   <string name="menu_settings">Nastavenia</string>
-  <!-- Menu * History * Clear history -->
   <string name="menu_clear_history">Vymazať históriu</string>
+  <string name="menu_no_suggestions">Bez návrhov</string>
+  <!-- Menu * Editor * Word wrap -->
+  <string name="menu_word_wrap">Zalamovať slová</string>
+  <!-- Menu * Editor * Sintax highlight -->
+  <string name="menu_syntax_highlight">Zvýrazniť syntax</string>
 
   <!-- Regular expression for create copy action -->
   <string name="create_copy_regexp"><xliff:g id="name">%1$s</xliff:g> - kopírovať<xliff:g id="extension">%2$s</xliff:g></string>
@@ -358,29 +194,37 @@
   <string name="create_new_compress_file_regexp"><xliff:g id="name">%1$s</xliff:g> - nový<xliff:g id="extension">%2$s</xliff:g></string>
 
   <!-- Waiting dialog * Performing operation message -->
-  <string name="waiting_dialog_msg">Prebieha operácia\u2026</string>
+  <string name="waiting_dialog_msg">Vykonáva sa operácia\u2026</string>
   <!-- Waiting dialog * Copying title -->
-  <string name="waiting_dialog_copying_title">Kopírovanie</string>
+  <string name="waiting_dialog_copying_title">Kopíruje sa\u2026</string>
   <!-- Waiting dialog * Copying message -->
-  <string name="waiting_dialog_copying_msg"><![CDATA[<b>Z</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]><![CDATA[<b>Do</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <string name="waiting_dialog_copying_msg">
+    <![CDATA[<b>From</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]>
+    <![CDATA[<b>To</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog * Moving title -->
-  <string name="waiting_dialog_moving_title">Presúvanie\u2026</string>
+  <string name="waiting_dialog_moving_title">Presúva sa\u2026</string>
   <!-- Waiting dialog * Moving message -->
-  <string name="waiting_dialog_moving_msg"><![CDATA[<b>Z</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]><![CDATA[<b>Do</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
+  <string name="waiting_dialog_moving_msg">
+    <![CDATA[<b>From</b>]]> <xliff:g id="from">%1$s</xliff:g><![CDATA[<br/>]]>
+    <![CDATA[<b>To</b>]]> <xliff:g id="to">%2$s</xliff:g></string>
   <!-- Waiting dialog * Deleting title -->
-  <string name="waiting_dialog_deleting_title">Odstraňovanie\u2026</string>
+  <string name="waiting_dialog_deleting_title">Odstraňuje sa\u2026</string>
   <!-- Waiting dialog * Deleting message -->
-  <string name="waiting_dialog_deleting_msg"><![CDATA[<b>Súbor</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_deleting_msg">
+    <![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog * Extracting title -->
-  <string name="waiting_dialog_extracting_title">Rozbaľovanie\u2026</string>
+  <string name="waiting_dialog_extracting_title">Rozbaľuje sa\u2026</string>
   <!-- Waiting dialog * Extracting message -->
-  <string name="waiting_dialog_extracting_msg"><![CDATA[<b>Súbor</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_extracting_msg">
+    <![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog * Extracting title -->
-  <string name="waiting_dialog_compressing_title">Komprimácia\u2026</string>
+  <string name="waiting_dialog_compressing_title">Komprimuje sa\u2026</string>
   <!-- Waiting dialog * Extracting message -->
-  <string name="waiting_dialog_compressing_msg"><![CDATA[<b>Súbor</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
+  <string name="waiting_dialog_compressing_msg">
+    <![CDATA[<b>File</b>]]> <xliff:g id="file">%1$s</xliff:g></string>
   <!-- Waiting dialog * Initializing the dialog -->
-  <string name="waiting_dialog_analizing_msg"><![CDATA[<b>Analýza\u2026</b>]]></string>
+  <string name="waiting_dialog_analizing_msg">
+    <![CDATA[<b>Analyzing\u2026</b>]]></string>
   <!-- Extracting * Success message -->
   <string name="msgs_extracting_success">Rozbaľovanie prebehlo úspešne. Údaje boli rozbalené do <xliff:g id="destination">%1$s</xliff:g>.</string>
   <!-- Compressing * Success message -->
@@ -404,16 +248,15 @@
   <string name="actions_menu_select">Vybrať</string>
   <!-- Actions Dialog * Menu * Deselect -->
   <string name="actions_menu_deselect">Zrušiť výber</string>
-  <!-- Actions Dialog * Menu * Paste selection -->
-  <string name="actions_menu_paste_selection">Vložiť vybrané</string>
+  <string name="actions_menu_paste_selection">Skopírovať výber sem</string>
   <!-- Actions Dialog * Menu * Move selection -->
-  <string name="actions_menu_move_selection">Presunúť vybrané</string>
+  <string name="actions_menu_move_selection">Presunúť výber sem</string>
   <!-- Actions Dialog * Menu * Delete selection -->
-  <string name="actions_menu_delete_selection">Odstrániť vybrané</string>
+  <string name="actions_menu_delete_selection">Odstrániť výber</string>
   <!-- Actions Dialog * Menu * Compress selection -->
-  <string name="actions_menu_compress_selection">Komprimovať vybrané</string>
+  <string name="actions_menu_compress_selection">Komprimovať výber</string>
   <!-- Actions Dialog * Menu * Create link -->
-  <string name="actions_menu_create_link">Vytvor odkaz</string>
+  <string name="actions_menu_create_link">Vytvoriť odkaz</string>
   <!-- Actions Dialog * Menu * Open -->
   <string name="actions_menu_open">Otvoriť</string>
   <!-- Actions Dialog * Menu * Open with -->
@@ -422,6 +265,8 @@
   <string name="actions_menu_execute">Spustiť</string>
   <!-- Actions Dialog * Menu * Send -->
   <string name="actions_menu_send">Odoslať</string>
+  <!-- Actions Dialog * Menu * Send selection -->
+  <string name="actions_menu_send_selection">Odoslať výber</string>
   <!-- Actions Dialog * Menu * Compress -->
   <string name="actions_menu_compress">Komprimovať</string>
   <!-- Actions Dialog * Menu * Extract -->
@@ -440,9 +285,11 @@
   <string name="actions_menu_add_shortcut">Pridať skratku</string>
   <!-- Actions Dialog * Menu * Open parent folder -->
   <string name="actions_menu_open_parent_folder">Otvoriť nadradený</string>
+  <!-- Actions Dialog * Menu * Compute checksum -->
+  <string name="actions_menu_compute_checksum">Vypočítať kontrolný medzisúčet</string>
 
   <!-- Actions * Ask user prior to do an undone operation. Dialog message -->
-  <string name="actions_ask_undone_operation_msg">Túto akciu nemožno vziať späť. Určite chcete pokračovať?</string>
+  <string name="actions_ask_undone_operation_msg">Túto akciu nemožno vrátiť späť. Chcete pokračovať?</string>
 
   <!-- Enter Name Dialog * Label -->
   <string name="input_name_dialog_label">Názov:</string>
@@ -480,7 +327,16 @@
   <!-- Execution console * The script exit code label -->
   <string name="execution_console_script_exitcode_label">Kód ukončenia:</string>
   <!-- Execution console * The script execution time seconds string -->
-  <string name="execution_console_script_execution_time_text"> <xliff:g id="seconds">%1$s</xliff:g> sek.</string>
+  <string name="execution_console_script_execution_time_text">
+    <xliff:g id="seconds">%1$s</xliff:g> sek.</string>
+
+  <!-- Compute checksum * Title -->
+  <string name="compute_checksum_title">Výpočet kontrolného medzisúčtu</string>
+  <!-- Compute checksum * The file name label -->
+  <string name="compute_checksum_filename_label">Súbor:</string>
+
+  <!-- Compute checksum * The computing checksum message-->
+  <string name="compute_checksum_computing_checksum_msg">Vypočítava sa kontrolný medzisúčet\u2026</string>
 
   <!-- Mime/Types * Folder -->
   <string name="mime_folder">Priečinok</string>
@@ -488,17 +344,12 @@
   <string name="mime_symlink">Symbolický odkaz</string>
   <!-- Mime/Types * Unknown -->
   <string name="mime_unknown">Neznámy</string>
-
-  <!-- Selection. All possibilities. [1 folder; >1 folders; 1 file; >1 files;
-     >1 folders and 1 file; 1 folder and >1 files; >1 folders and >1 files]
-     Avoid using plural item because is more complex to achieved all strings -->
-  <string name="selection_one_folder"><xliff:g id="folders">%1$s</xliff:g> vybraný priečinok.</string>
-  <string name="selection_other_folders"><xliff:g id="folders">%1$s</xliff:g> vybrané(-ých) priečinky(-ov).</string>
-  <string name="selection_one_file"><xliff:g id="files">%1$s</xliff:g> vybraný súbor.</string>
-  <string name="selection_other_files"><xliff:g id="files">%1$s</xliff:g> vybrané(-ých) súbory(-ov).</string>
-  <string name="selection_other_folders_one_file"><xliff:g id="folders">%1$s</xliff:g> vybrané(-ých) priečinky(-ov) a <xliff:g id="files">%2$s</xliff:g> súbory(-ov).</string>
-  <string name="selection_one_folder_other_files"><xliff:g id="folder2">%1$s</xliff:g> vybraný priečinok a <xliff:g id="file2">%2$s</xliff:g> súbory(-ov).</string>
-  <string name="selection_other_folders_other_files"><xliff:g id="folder2">%1$s</xliff:g> vybrané(-ých) priečinky(-ov) a <xliff:g id="files">%2$s</xliff:g> súbor.</string>
+  <!--  Filetime formats -->
+  <string name="filetime_format_mode_system">Určené systémom</string>
+  <string name="filetime_format_mode_locale">Určené miestnymi nastaveniami</string>
+  <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
 
   <!-- Category descriptions -->
   <string name="category_system">SYSTÉM</string>
@@ -532,15 +383,23 @@
   <string name="pref_general">Všeobecné nastavenia</string>
   <!-- Preferences * Search title -->
   <string name="pref_search">Nastavenie vyhľadávania</string>
+  <!-- Preferences * Editor title -->
+  <string name="pref_editor">Voľby editora</string>
+  <!-- Preferences * Themes title -->
+  <string name="pref_themes">Témy</string>
   <!-- Preferences * About title -->
   <string name="pref_about">O aplikácii</string>
   <!-- Preferences * About summary -->
-  <string name="pref_about_summary">Správca súborov ver.<xliff:g id="version">%1$s</xliff:g>\nCopyright © 2012 The CyanogenMod Project</string>
+  <string name="pref_about_summary">Správca súborov ver.<xliff:g id="version">%1$s</xliff:g>\nAutorské práva © 2012 The CyanogenMod Project</string>
 
   <!-- Preferences * General * Behaviour category -->
   <string name="pref_general_behaviour_category">Všeobecné</string>
   <!-- Preferences * General * Case sensitive sort title -->
   <string name="pref_case_sensitive_sort">Rozlišovať veľké a malé písmená pri triedení</string>
+  <!-- Preferences * General * Case sensitive sort and navigating summary -->
+  <string name="pref_case_sensitive_sort_summary">Zvážiť veľké a malé písmená pri prechádzaní alebo usporiadaní výsledkov hľadania</string>
+  <!-- Preferences * General * Filetime format mode title -->
+  <string name="pref_filetime_format_mode">Formát dátumu a času</string>
   <!-- Preferences * General *Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Upozornenie o využití disku</string>
   <!-- Preferences * General * Disk usage warning level summary -->
@@ -599,9 +458,73 @@
   <string name="pref_remove_saved_search_terms_summary">Dotykom vymažete všetky uložené hľadané výrazy</string>
   <!-- Preferences * Search * Suggestions were truncated -->
   <string name="pref_remove_saved_search_terms_msg">Všetky hľadané výrazy boli vymazané.</string>
+  <!-- Preferences * Editor * Behaviour category -->
+  <string name="pref_editor_behaviour_category">Správanie</string>
+  <!-- Preferences * Editor * No suggestions -->
+  <string name="pref_no_suggestions">Žiadne návrhy</string>
+  <!-- Preferences * Editor * No suggestions summary -->
+  <string name="pref_no_suggestions_desc">Počas úprav súboru sa nezobrazia návrhy zo slovníka</string>
+  <!-- Preferences * Editor * Word wrap -->
+  <string name="pref_word_wrap">Zalamovať slová</string>
+  <!-- Preferences * Editor * Hexdump -->
+  <string name="pref_hexdump">Binárne súbory hexadecimálneho výpisu</string>
+  <!-- Preferences * Editor * Hexdump desc -->
+  <string name="pref_hexdump_desc">Pri otvorení binárneho súboru sa vygeneruje hexadecimálny výpis súboru a otvorí sa v hexadecimálnom prehliadači.</string>
+    <!-- Preferences * Editor * Syntax highlight category -->
+  <string name="pref_editor_syntax_highlight_category">Zvýraznenie syntaxe</string>
+  <!-- Preferences * Editor * Syntax highlight -->
+  <string name="pref_syntax_highlight">Zvýrazniť syntax</string>
+  <!-- Preferences * Editor * Syntax highlight summary -->
+  <string name="pref_syntax_highlight_desc"> Bude zvýraznená syntax súboru zobrazeného v editore (iba keď je dostupný procesor zvýraznenia syntaxe pre daný typ súboru)</string>
+  <!-- Preferences * Editor * Syntax highlight color scheme -->
+  <string name="pref_syntax_highlight_color_scheme">Farebná schéma</string>
+  <!-- Preferences * Editor * Syntax highlight color scheme summary -->
+  <string name="pref_syntax_highlight_color_scheme_desc">Ťuknutím vyberiete farebnú schému pre zvýraznený syntax</string>
+  <!-- Preferences * Editor * Syntax highlight * Color Scheme -->
+  <string name="pref_syntax_sh_use_theme_default">Použiť predvolenú tému</string>
+  <!-- Preferences * Editor * Syntax highlight *Color Scheme summary -->
+  <string name="pref_syntax_sh_use_theme_default_desc">Použije sa predvolené zvýraznenie aktuálnej témy</string>
+  <!-- Preferences * Editor * Syntax highlight * Color Scheme * Items category -->
+  <string name="pref_editor_sh_item_category">Položky</string>
+  <!-- Preferences * Themes * Themes selection category -->
+  <string name="pref_themes_selection_category">Témy</string>
+  <!-- Preferences * Themes * Set theme button -->
+  <string name="pref_themes_set_theme">Nastaviť tému</string>
+  <!-- Preferences * Themes * No preview -->
+  <string name="pref_themes_no_preview">Nie je dostupná\nukážka</string>
+  <!-- Preferences * Themes * Confirmation message -->
+  <string name="pref_themes_confirmation">Téma bola aplikovaná úspešne.</string>
+  <!-- Preferences * Themes * Theme not found message -->
+  <string name="pref_themes_not_found">Téma sa nenašla.</string>
 
   <!-- Preferences * Debug * Capture debug traces -->
   <string name="pref_debug_traces">Zaznamenať informácie ladenia</string>
+  <!-- Themes * Default theme name -->
+  <string name="theme_default_name">Svetlá téma</string>
+  <!-- Themes * Default theme description -->
+  <string name="theme_default_description">A light theme for CyanogenMod File Manager.</string>
+  <!-- Themes * Default theme author -->
+  <string name="themes_author">CyanogenMod</string>
+
+  <!-- ColorPickerDialog -->
+  <!-- The text of the alpha slider control -->
+  <string name="color_picker_alpha_slider_text">Alpha</string>
+  <!-- The label of the current color panel -->
+  <string name="color_picker_current_text">Current:</string>
+  <!-- The label of the new color panel -->
+  <string name="color_picker_new_text">New:</string>
+  <!-- The label of the color input -->
+  <string name="color_picker_color">Color:</string>
+
+  <!-- Android Syntax Highlight -->
+  <string name="ash_reset_color_scheme">Ťuknutím obnovíte predvolenú schému farebnej témy</string>
+  <string name="ash_text">Text</string>
+  <string name="ash_assignment">Pridelenie</string>
+  <string name="ash_singleline_comment">Jednoriadkový komentár</string>
+  <string name="ash_multiline_comment">Viacriadkový komentár</string>
+  <string name="ash_keyword">Kľúčové slovo</string>
+  <string name="ash_quoted_string">Reťazec v úvodzovkách</string>
+  <string name="ash_variable">Premenná</string>
 
   <!-- Security * Extract relative or absolute files -->
   <string name="security_warning_extract">Upozornenie!\n\nRozbaľovanie archívu s relatívnou alebo absolútnou cestou môže spôsobiť poškodenie vášho zariadenia tým, že dôjde k prepísaniu systémových súborov.\n\nUrčite chcete pokračovať?</string>

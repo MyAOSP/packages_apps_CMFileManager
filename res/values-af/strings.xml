@@ -20,6 +20,15 @@
   <!-- The description of the application -->
   <string name="app_description">\'n CyanogenMod Lêerverkenner.</string>
 
+  <!-- Human readable sizes -->
+  <string name="size_bytes">G</string>
+  <string name="size_kilobytes">kG</string>
+  <string name="size_megabytes">MG</string>
+  <string name="size_gigabytes">GG</string>
+
+  <!-- Date/time format order (%1$s: date; %2$s: time) -->
+  <string name="datetime_format_order">%1$s %2$s</string>
+
   <!-- Devices types -->
   <string name="device_blockdevice">Bloktoestel</string>
   <string name="device_characterdevice">Karaktertoestel</string>
@@ -35,6 +44,7 @@
   <string name="no">Nee</string>
   <string name="all">Alles</string>
   <string name="overwrite">Oorskryf</string>
+  <string name="select">Kies</string>
 
   <!-- The root directory name -->
   <string name="root_directory_name"><![CDATA[<\'Root\' vouergids>]]></string>
@@ -264,13 +274,13 @@
   <!-- Fso Properties Dialog * Others Label -->
   <string name="fso_properties_dialog_others">Ander:</string>
   <!-- Fso Properties Dialog * Folders -->
-  <plurals name="fso_properties_dialog_folders">
+  <plurals name="n_folders">
     <item quantity="zero">0 vouergidse</item>
     <item quantity="one">1 vouergids</item>
     <item quantity="other"><xliff:g id="folders">%1$d</xliff:g> vouergidse</item>
   </plurals>
   <!-- Fso Properties Dialog * Files -->
-  <plurals name="fso_properties_dialog_files">
+  <plurals name="n_files">
     <item quantity="zero">0 lêers</item>
     <item quantity="one">1 lêer</item>
     <item quantity="other"><xliff:g id="files">%1$d</xliff:g> lêers</item>
@@ -324,6 +334,7 @@
 
   <!-- Picker Activity * Dialog title -->
   <string name="picker_title">Kies \'n lêer</string>
+  <string name="directory_picker_title">Kies \'n vouergids</string>
 
   <!-- Editor * Editor activity title -->
   <string name="editor">Notaboek</string>
@@ -341,6 +352,10 @@
   <string name="editor_successfully_saved">Die lêer is suksesvol gestoor.</string>
   <!-- Editor * Read-only file mode -->
   <string name="editor_read_only_mode">Die lêer was geopen in leesalleen modus.</string>
+  <!-- Editor * Dumping message -->
+  <string name="dumping_message">Genereer \'n hex storting\u2026</string>
+  <!-- Editor * Displaying -->
+  <string name="displaying_message">Vertoon\u2026</string>
 
   <!-- Bookmarks * Bookmarks activity title -->
   <string name="bookmarks">Boekmerke</string>
@@ -549,19 +564,12 @@
   <!-- Mime/Types * Unknown -->
   <string name="mime_unknown">Onbekend</string>
 
-  <!-- Selection. All possibilities. [1 folder; >1 folders; 1 file; >1 files;
-     >1 folders and 1 file; 1 folder and >1 files; >1 folders and >1 files]
-     Avoid using plural item because is more complex to achieved all strings -->
-  <string name="selection_one_folder"><xliff:g id="folders">%1$s</xliff:g> vouergids geselekteer.</string>
-  <string name="selection_other_folders"><xliff:g id="folders">%1$s</xliff:g> vouergidse geselekteer.</string>
-  <string name="selection_one_file"><xliff:g id="files">%1$s</xliff:g> lêer geselekteer.</string>
-  <string name="selection_other_files"><xliff:g id="files">%1$s</xliff:g> lêers geselekteer.</string>
-  <string name="selection_other_folders_one_file"><xliff:g id="folders">%1$s</xliff:g> vouergids en
-    <xliff:g id="files">%2$s</xliff:g> lêer geselekteer.</string>
-  <string name="selection_one_folder_other_files"><xliff:g id="folder2">%1$s</xliff:g> vouergids en
-    <xliff:g id="file2">%2$s</xliff:g> lêers geselekteer.</string>
-  <string name="selection_other_folders_other_files"><xliff:g id="folder2">%1$s</xliff:g> vouergidse
-    en <xliff:g id="files">%2$s</xliff:g> lêers geselekteer.</string>
+  <!--  Filetime formats -->
+  <string name="filetime_format_mode_system">Stelsel-gedefinieerd</string>
+  <string name="filetime_format_mode_locale">Land-gedefinieerd</string>
+  <string name="filetime_format_mode_ddMMyyyy_HHmmss">dd/mm/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_MMddyyyy_HHmmss">mm/dd/yyyy hh:mm:ss</string>
+  <string name="filetime_format_mode_yyyyMMdd_HHmmss">yyyy-mm-dd hh:mm:ss</string>
 
   <!-- Category descriptions -->
   <string name="category_system">STELSEL</string>
@@ -610,6 +618,10 @@
   <string name="pref_general_behaviour_category">Algemeen</string>
   <!-- Preferences * General * Case sensitive sort title -->
   <string name="pref_case_sensitive_sort">Gebruik letter-sensitiewe sortering</string>
+  <!-- Preferences * General * Case sensitive sort and navigating summary -->
+  <string name="pref_case_sensitive_sort_summary">Oorweeg letter-sensitiewe navigasie en sortering van soek resultate</string>
+  <!-- Preferences * General * Filetime format mode title -->
+  <string name="pref_filetime_format_mode">Datum/tyd formaat</string>
   <!-- Preferences * General *Disk usage warning level title -->
   <string name="pref_disk_usage_warning_level">Bergingspasie waarskuwing</string>
   <!-- Preferences * General * Disk usage warning level summary -->
